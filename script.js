@@ -15,16 +15,25 @@ setInterval(()=>{
   let hour = document.querySelector("#hour")
   let minutes = document.querySelector("#minutes")
   let seconds = document.querySelector("#seconds")
-  let ampm = document.querySelector("#ampm")
+  //let ampm = document.querySelector("#ampm")
+  let good = document.querySelector("#good")
   
   let h = new Date().getHours();
   let m = new Date().getMinutes();
   let s = new Date().getSeconds();
-  var am = "AM";
+  //var am = "AM";
+  var morning = "Good Night";
   
-  if (h > 12) {
-    h = h - 12;
+  /*if (h > 12) {
+    h = h - 12
     var am = "PM"
+  }*/
+  if (h > 1 && h < 11) {
+    var morning = "Good Morning"
+  } else if (h > 10 && h < 17) {
+    var morning = "Good Afternoon"
+  } else if (h > 16 && h < 23) {
+    var morning = "Good Night"
   }
   
   h = (h < 10) ? "0" + h : h;
@@ -34,6 +43,7 @@ setInterval(()=>{
   hour.innerHTML = h+":";
   minutes.innerHTML = m+":";
   seconds.innerHTML = s+"&nbsp";
-  ampm.innerHTML = am;
+  //ampm.innerHTML = am;
+  good.innerHTML = morning;
   
-})
+ })
