@@ -1,10 +1,11 @@
-up<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="shortcut icon" href="https://cdn.glitch.com/5985b910-b9e4-4118-86fd-d46bd9fa0a64%2Fdownload-removebg-preview%20(2).png?v=1595668723574">
+    <link rel="icon" href="https://cdn.glitch.com/5985b910-b9e4-4118-86fd-d46bd9fa0a64%2Fdownload-removebg-preview%20(2).png?v=1595668723574">
+    <link rel="shorcut icon" href="https://cdn.glitch.com/5985b910-b9e4-4118-86fd-d46bd9fa0a64%2Fdownload-removebg-preview%20(2).png?v=1595668723574">
     <title>Minimalist Clock</title>
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js" defer></script>
@@ -24,9 +25,10 @@ up<!DOCTYPE html>
     <div id="digitalClock">
       <div id="hour"></div>
       <div id="minutes"></div>
-      <div id="seconds" style="color:#62d3f5"></div>
+      <div id="seconds" class="other"></div>
       <div id="ampm"></div>
     </div>
-    <p><span id="good"></span>&nbsp|<span style="color:#62d3f5">&nbspKizuu</span></p>
+    <p><span id="good"></span>&nbsp|<span class="other">&nbspKizuu</span></p>
+    <div class="toggleClass" onclick="toggleClass()"></div>
   </body>
 </html>
