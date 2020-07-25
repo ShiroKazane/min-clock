@@ -8,11 +8,11 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos
 
 ## Latest Features
 
-> ### 0.0.3
+> **0.0.3**
 > - Light Mode Toggle
 >
 
-> ### 0.0.2
+> **0.0.2**
 > - Auto change `Good ...` Word (I do not know the name)
 >
 
