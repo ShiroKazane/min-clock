@@ -1,3 +1,8 @@
+function toggleClass() {
+  const body = document.querySelector('body')
+  body.classList.toggle('light')
+}
+
 const hr = document.querySelector("#hr")
 const mn = document.querySelector("#mn")
 const sc = document.querySelector("#sc")
