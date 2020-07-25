@@ -14,3 +14,13 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos
 
 > **v0.0.2**
 > - Auto change `Good ...` Word (I do not know the name)
+>
+
+> **v0.0.1**
+> - Display Clock
+> - Display Digital Clock (HH:MM:SS)
+> - Dark Theme
+> - AM/PM
+>
+
+#### Made by `Kizuu` with Love
