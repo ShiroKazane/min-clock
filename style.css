@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Consolas, monaco, monospace;
+  transition: 2
 }
 body {
   display: flex;
@@ -10,10 +11,12 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background: #26272A;
+  overflow: hidden;
+  transition-duration: 0.7s;
+  background: #222;
 }
 body.light {
-  background: #d1dae3;
+  background: #fff;
 }
 .clock {
   width: 350px;
@@ -25,19 +28,19 @@ body.light {
   border-radius: 50%;
 }
 body.light .clock {
-  border: 8px solid #26272A
+  border: 8px solid #222
 }
 .clock::before {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #62d3f5;
+  background: #fff;
   z-index: 10000;
   border-radius: 50%;
 }
 body.light .clock::before {
-  background: #ff0066
+  background: #f58462
 }
 .hour,
 .min,
@@ -74,7 +77,7 @@ body.light .clock::before {
   background: #fff;
 }
 body.light .hr::before {
-  background: #26272A
+  background: #222
 }
 .mn::before {
   content: "";
@@ -84,7 +87,7 @@ body.light .hr::before {
   background: #fff;
 }
 body.light .mn::before {
-  background: #26272A
+  background: #222
 }
 .sc::before {
   content: "";
@@ -94,31 +97,34 @@ body.light .mn::before {
   background: #62d3f5;
 }
 body.light .sc::before {
-  background: #ff0066
+  background: #f58462
 }
 #digitalClock {
   display: flex;
   color: #fff;
+  transition-duration: 0.5s;
   font-size: 4em;
   margin-top: 30px;
 }
 body.light #digitalClock {
-  color: #26272A
+  color: #222
 }
 p {
   display: flex;
   color: #fff;
+  transition-duration: 0.5s;
   font-size: 1.5em;
   margin-top: 3px;
 }
 body.light p {
-  color: #26272A
+  color: #222
 }
 .other {
-  color: #62d3f5
+  color: #62d3f5;
+  transition-duration: 0.5s;
 }
 body.light .other {
-  color: #ff0066
+  color: #f58462
 }
 .toggleClass {
   position: absolute;
@@ -127,9 +133,10 @@ body.light .other {
   width: 20px;
   height: 20px;
   font-size: 18px;
+  transition-duration: 0.7s;
   border-radius: 50%;
-  background: #d1dae3;
-  color: #d1dae3;
+  background: #fff;
+  color: #fff;
   font-family: Consolas, monaco, monospace;
   cursor: pointer;
   display: flex;
@@ -142,8 +149,8 @@ body.light .other {
   white-space: nowrap
 }
 body.light .toggleClass {
-  background: #26272A;
-  color: #26272A;
+  background: #222;
+  color: #222;
 }
 body.light .toggleClass:before {
   content: 'Dark Mode';
