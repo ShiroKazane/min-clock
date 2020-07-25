@@ -1,10 +1,19 @@
 # Minimalist Clock
 
-![Owner](https://badgen.net/badge/Owner/Kizuu/blue?icon=github) ![Version](https://badgen.net/badge/Version/v0.0.2/green?icon=github)
+![Owner](https://img.shields.io/badge/Owner-Kizuu-blue) ![Version](https://badgen.net/badge/version/v0.0.3/blue) ![Size](https://img.shields.io/github/languages/code-size/KizuuDev/min-clock)
 
 This Minimalist Clock is made with source code from `Online Tutorials` videos
 
 [Link video](https://youtu.be/s9mGaRSRGZw)
 
+## Latest Features
 
-#### Made by `Kizuu`
+> **v0.0.3**
+> - Light Mode Toggle
+>
+
+> **v0.0.2**
+> - Auto change `Good ...` Word (I do not know the name)
+>
+
+#### Made by `Kizuu` with Love

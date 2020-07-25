@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Consolas, monaco, monospace;
 }
 body {
   display: flex;
@@ -12,6 +11,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: #26272A;
+}
+body.light {
+  background: #d1dae3;
 }
 .clock {
   width: 350px;
@@ -22,6 +24,9 @@ body {
   border: 8px solid #fff;
   border-radius: 50%;
 }
+body.light .clock {
+  border: 8px solid #26272A
+}
 .clock::before {
   content: "";
   position: absolute;
@@ -30,6 +35,9 @@ body {
   background: #62d3f5;
   z-index: 10000;
   border-radius: 50%;
+}
+body.light .clock::before {
+  background: #ff0066
 }
 .hour,
 .min,
@@ -65,12 +73,18 @@ body {
   height: 100px;
   background: #fff;
 }
+body.light .hr::before {
+  background: #26272A
+}
 .mn::before {
   content: "";
   position: absolute;
   width: 4px;
   height: 110px;
   background: #fff;
+}
+body.light .mn::before {
+  background: #26272A
 }
 .sc::before {
   content: "";
@@ -79,15 +93,58 @@ body {
   height: 120px;
   background: #62d3f5;
 }
+body.light .sc::before {
+  background: #ff0066
+}
 #digitalClock {
   display: flex;
   color: #fff;
   font-size: 4em;
   margin-top: 30px;
 }
+body.light #digitalClock {
+  color: #26272A
+}
 p {
   display: flex;
   color: #fff;
   font-size: 1.5em;
   margin-top: 3px;
+}
+body.light p {
+  color: #26272A
+}
+.other {
+  color: #62d3f5
+}
+body.light .other {
+  color: #ff0066
+}
+.toggleClass {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  color: #d1dae3;
+  font-family: Consolas, monaco, monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.toggleClass:before {
+  position: absolute;
+  left: 25px;
+  content: 'Light Mode';
+  white-space: nowrap
+}
+body.light .toggleClass {
+  background: #26272A;
+  color: #26272A;
+}
+body.light .toggleClass:before {
+  content: 'Dark Mode';
 }
