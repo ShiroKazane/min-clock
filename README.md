@@ -11,7 +11,7 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos
 > **v0.0.4**
 > - Add Fade Transition
 > - Beautify the colors on each theme
-> - Set light mode as default theme
+> - Set dark mode as default theme
 >
 
 > **v0.0.3**
