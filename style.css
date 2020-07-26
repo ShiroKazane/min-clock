@@ -5,6 +5,9 @@
   font-family: Consolas, monaco, monospace;
   transition: 2
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
   justify-content: center;
@@ -15,9 +18,6 @@ body {
   transition-duration: 0.7s;
   background: #222;
 }
-body.light {
-  background: #fff;
-}
 .clock {
   width: 350px;
   height: 350px;
@@ -27,20 +27,14 @@ body.light {
   border: 8px solid #fff;
   border-radius: 50%;
 }
-body.light .clock {
-  border: 8px solid #222
-}
 .clock::before {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #fff;
+  background: #62d3f5;
   z-index: 10000;
   border-radius: 50%;
-}
-body.light .clock::before {
-  background: #f58462
 }
 .hour,
 .min,
@@ -76,18 +70,12 @@ body.light .clock::before {
   height: 100px;
   background: #fff;
 }
-body.light .hr::before {
-  background: #222
-}
 .mn::before {
   content: "";
   position: absolute;
   width: 4px;
   height: 110px;
   background: #fff;
-}
-body.light .mn::before {
-  background: #222
 }
 .sc::before {
   content: "";
@@ -96,18 +84,12 @@ body.light .mn::before {
   height: 120px;
   background: #62d3f5;
 }
-body.light .sc::before {
-  background: #f58462
-}
 #digitalClock {
   display: flex;
   color: #fff;
   transition-duration: 0.5s;
   font-size: 4em;
   margin-top: 30px;
-}
-body.light #digitalClock {
-  color: #222
 }
 p {
   display: flex;
@@ -116,15 +98,9 @@ p {
   font-size: 1.5em;
   margin-top: 3px;
 }
-body.light p {
-  color: #222
-}
 .other {
   color: #62d3f5;
   transition-duration: 0.5s;
-}
-body.light .other {
-  color: #f58462
 }
 .toggleClass {
   position: absolute;
@@ -148,10 +124,73 @@ body.light .other {
   content: 'Light Mode';
   white-space: nowrap
 }
+
+body.light {
+  background: #fff;
+}
+body.light .clock {
+  border: 8px solid #222
+}
+body.light .clock::before {
+  background: #f58462
+}
+body.light .hr::before {
+  background: #222
+}
+body.light .mn::before {
+  background: #222
+}
+body.light .sc::before {
+  background: #f58462
+}
+body.light #digitalClock {
+  color: #222
+}
+body.light p {
+  color: #222
+}
+body.light .other {
+  color: #f58462
+}
 body.light .toggleClass {
   background: #222;
   color: #222;
 }
 body.light .toggleClass:before {
   content: 'Dark Mode';
+}
+
+body.dark {
+  background: #222;
+}
+body.dark .clock {
+  border: 8px solid #fff
+}
+body.dark .clock::before {
+  background: #62d3f5
+}
+body.dark .hr::before {
+  background: #fff
+}
+body.dark .mn::before {
+  background: #fff
+}
+body.dark .sc::before {
+  background: #62d3f5
+}
+body.dark #digitalClock {
+  color: #fff
+}
+body.dark p {
+  color: #fff
+}
+body.dark .other {
+  color: #62d3f5
+}
+body.dark .toggleClass {
+  background: #fff;
+  color: #fff;
+}
+body.dark .toggleClass {
+  content: 'Light Mode';
 }
