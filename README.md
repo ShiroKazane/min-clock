@@ -9,8 +9,7 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos
 ## Latest Features
 
 > **v0.0.5**
-> - Add Express
-> - Add Error Page
+> - Add localStorage at Dark/Light Mode
 >
 
 > **v0.0.4**

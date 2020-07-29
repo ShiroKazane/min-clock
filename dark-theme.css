@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  y-index: 0;
+  box-sizing: border-box;
+  font-family: Consolas, monaco, monospace;
+  transition: 2
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  transition-duration: 0.7s;
+  background: #fff;
+}
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #222;
+  border-radius: 50%;
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #f58462;
+  z-index: 10000;
+  border-radius: 50%;
+}
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+.hour,
+.hr {
+  width: 200px;
+  height: 200px;
+}
+.min,
+.mn {
+  width: 230px;
+  height: 230px;
+}
+.sec,
+.sc {
+  width: 250px;
+  height: 250px;
+}
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100px;
+  background: #222;
+}
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 110px;
+  background: #222;
+}
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: #f58462;
+}
+#digitalClock {
+  display: flex;
+  color: #222;
+  transition-duration: 0.5s;
+  font-size: 4em;
+  margin-top: 30px;
+}
+p {
+  display: flex;
+  color: #222;
+  transition-duration: 0.5s;
+  font-size: 1.5em;
+  margin-top: 3px;
+}
+.other {
+  color: #f58462;
+  transition-duration: 0.5s;
+}
+#theme-toggle {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  transition-duration: 0.7s;
+  border-radius: 50%;
+  background: #222;
+  color: #222;
+  font-family: Consolas, monaco, monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#theme-toggle:before {
+  position: absolute;
+  left: 25px;
+  content: 'Dark Mode';
+  white-space: nowrap
+}
