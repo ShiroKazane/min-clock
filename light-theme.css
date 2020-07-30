@@ -5,7 +5,7 @@
   y-index: 0;
   box-sizing: border-box;
   font-family: Consolas, monaco, monospace;
-  transition: 2
+  transition: 2;
 }
 html {
   scroll-behavior: smooth;
@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   transition-duration: 0.7s;
-  background: #222;
+  background: #fff;
 }
 .clock {
   width: 350px;
@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 8px solid #fff;
+  border: 8px solid #222;
   border-radius: 50%;
 }
 .clock::before {
@@ -34,7 +34,7 @@ body {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #62d3f5;
+  background: #f13c20;
   z-index: 10000;
   border-radius: 50%;
 }
@@ -70,39 +70,39 @@ body {
   position: absolute;
   width: 8px;
   height: 100px;
-  background: #fff;
+  background: #222;
 }
 .mn::before {
   content: "";
   position: absolute;
   width: 4px;
   height: 110px;
-  background: #fff;
+  background: #222;
 }
 .sc::before {
   content: "";
   position: absolute;
   width: 2px;
   height: 120px;
-  background: #62d3f5;
+  background: #f13c20;
 }
 #digitalClock {
   display: flex;
-  color: #fff;
+  color: #222;
   transition-duration: 0.5s;
   font-size: 4em;
   margin-top: 30px;
 }
 p {
   display: flex;
-  color: #fff;
+  color: #222;
   transition-duration: 0.5s;
   font-size: 1.5em;
   margin-top: 3px;
 }
 .other {
-  color: #62d3f5;
-  transition-duration: 0.5s;
+  color: #f13c20;
+  transition-duration: 0;
 }
 #theme-toggle {
   position: absolute;
@@ -113,8 +113,8 @@ p {
   font-size: 18px;
   transition-duration: 0.7s;
   border-radius: 50%;
-  background: #fff;
-  color: #fff;
+  background: #222;
+  color: #222;
   font-family: Consolas, monaco, monospace;
   cursor: pointer;
   display: flex;
@@ -123,6 +123,78 @@ p {
 #theme-toggle:before {
   position: absolute;
   left: 25px;
-  content: 'Light Mode';
-  white-space: nowrap
+  content: "Dark Mode";
+  white-space: nowrap;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #62d3f5;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.typewrite > .wrap {
+  border-right: 0.15em solid #222;
+  margin: 0 auto;
+  animation: blink-caret 0.7s step-end infinite;
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #222; }
 }
