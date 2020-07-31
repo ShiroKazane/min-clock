@@ -2,7 +2,7 @@
 
 ![Owner](https://img.shields.io/badge/owner-Kizuu-blue) ![Version](https://badgen.net/badge/version/v0.0.5/blue) ![Size](https://img.shields.io/github/languages/code-size/KizuuDev/min-clock)
 
-This Minimalist Clock is made with source code from `Online Tutorials` videos
+This Minimalist Clock is made with source code from `Online Tutorials` videos. Which was developed so that it becomes more interesting.
 
 [Link video](https://youtu.be/s9mGaRSRGZw)
 
