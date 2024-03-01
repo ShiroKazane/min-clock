@@ -1,0 +1,248 @@
+:root {
+    --fg-color: #fff;
+    --bg-color: #2d3748;
+    --link-color: #667fea;
+    --parag-color: #eee;
+    --loader-color: #2d3748;
+    --box-color: #fff;
+    --theme: "Light Mode";
+}
+
+.light {
+    --fg-color: #2d3748;
+    --bg-color: #fff;
+    --parag-color: #666;
+    --loader-color: #fff;
+    --box-color: #2d3748;
+    --theme: "Dark Mode";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monaco, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--bg-color);
+    color: var(--bg-color);
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--link-color);
+    border-radius: 20px;
+    border: 4px solid var(--bg-color)
+}
+
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--loader-color);
+    z-index: 1;
+}
+
+.box {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    background: var(--box-color);
+    animation: animate 0.5s linear infinite;
+}
+
+.shadow {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    top: calc(50% - -39px);
+    left: calc(50% - 20px);
+    opacity: 0.1;
+    border-radius: 50%;
+    background: #000;
+    animation: shadow 0.5s linear infinite;
+}
+
+.analog {
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid var(--fg-color);
+    border-radius: 50%;
+}
+
+.analog::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--link-color);
+    z-index: 10000;
+    border-radius: 50%;
+}
+
+.hours, .minutes, .seconds {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform-origin: center;
+}
+.hours, .hour {
+    width: 200px;
+    height: 200px;
+    animation-duration: 43200s;
+}
+.minutes, .minute {
+    width: 230px;
+    height: 230px;
+    animation-duration: 3600s;
+}
+.seconds, .second {
+    width: 250px;
+    height: 250px;
+    animation-duration: 60s;
+}
+.hour, .minute, .second {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.hour::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: var(--fg-color);
+}
+.minute::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: var(--fg-color);
+}
+.second::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: var(--link-color);
+}
+
+.digital {
+    display: flex;
+    color: var(--fg-color);
+    font-size: 4em;
+    margin-top: 30px;
+}
+
+.themeSwitch {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 150px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: var(--fg-color);
+    color: var(--fg-color);
+    font-family: Consolas, monaco, monospace;
+}
+
+.themeSwitch:before {
+    position: absolute;
+    left: 25px;
+    content: var(--theme);
+    white-space: nowrap;
+}
+
+p {
+    justify-content: center;
+    text-align: center;
+    color: var(--fg-color);
+    font-size: 1.5em;
+    margin-top: 3px;
+}
+
+.alt {
+    color: var(--link-color);
+}
+
+.typendelete > .wrap {
+    border-right: 0.15em solid var(--fg-color);
+    margin: 0 auto;
+    animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--fg-color);
+    }
+}
+
+@keyframes animate {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+    
+    50% {
+        transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+    
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+    
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow {
+    50% {
+        transform: scale(1.2, 1);
+    }
+}
