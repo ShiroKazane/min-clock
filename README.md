@@ -1,12 +1,18 @@
 # Minimalist Clock
 
-![Owner](https://img.shields.io/badge/owner-Kizuu-blue) ![Version](https://badgen.net/badge/version/v0.0.5/blue) ![Size](https://img.shields.io/github/languages/code-size/KizuuDev/min-clock)
+![Owner](https://img.shields.io/badge/owner-Shiro-blue) ![Version](https://badgen.net/badge/version/v0.0.6/blue) ![Size](https://img.shields.io/github/languages/code-size/ShiroKazane/min-clock)
 
-This Minimalist Clock is made with source code from `Online Tutorials` videos. Which was developed so that it becomes more interesting.
-
-[Link video](https://youtu.be/s9mGaRSRGZw)
+This Minimalist Clock is made with love. Which was developed so that it becomes more interesting.
 
 ## Latest Features
+
+> **v0.0.6**
+>
+> - Cleaning it's code
+> - Smooth analog hand
+> - Changing theme color
+> - Set dark mode as default theme
+> - Changing favicon to my custom drawing
 
 > **v0.0.5**
 >
@@ -24,7 +30,7 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos. W
 
 > **v0.0.2**
 >
-> - Auto change `Good ...` Word (I do not know the name)
+> - Auto change Greetings
 
 > **v0.0.1**
 >
@@ -33,4 +39,4 @@ This Minimalist Clock is made with source code from `Online Tutorials` videos. W
 > - Dark Theme
 > - AM/PM
 
-#### Made by `Kizuu` with Love
+#### Made by `Shiro` with ❤️
